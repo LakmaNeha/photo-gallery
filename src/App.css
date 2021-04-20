@@ -3,8 +3,8 @@
 .App {
   font-family: 'Shadows Into Light', cursive;
   margin: 1rem;
-  margin-left: 8rem;
-  margin-right: 8rem;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 label input{
@@ -63,6 +63,8 @@ label span{
   background: rgba(0,0,0,0.5);
 }
 
+
+
 .backdrop img{
   display: block;
   max-width: 60%;
@@ -71,3 +73,22 @@ label span{
   box-shadow:  3px 5px 7px rgba(0,0,0,0.5) ;
   border: 3px solid white;
 }
+
+.arrow-up{
+  border: none;
+   font-size: 3rem;
+   cursor: pointer;
+   color: #CC9A52;
+   outline: none;
+   background-color: white;
+   margin:auto;
+   display:block;
+}
+
+.zindex{
+  z-index: 1;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+

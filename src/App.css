@@ -88,6 +88,7 @@ label span{
 .zindex{
   z-index: 1;
   position: absolute;
+  cursor: pointer;
   right: 0px;
   bottom: 0px;
 }

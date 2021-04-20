@@ -24,7 +24,10 @@ const ImgeGrid = ({setSelectedImage, setDocId }) => {
                     transition={{delay:0.5}}/>
                 
                 <button className="zindex " >
-                <BsFillTrashFill onClick={() => setDocId(doc.id)} />
+                <BsFillTrashFill onClick={(e) => 
+                { setDocId(doc.id);
+                  e.stopPropagation( );
+                }} />
                 </button>
 
                 </motion.div>

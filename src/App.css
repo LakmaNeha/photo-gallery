@@ -80,7 +80,7 @@ label span{
    cursor: pointer;
    color: #CC9A52;
    outline: none;
-   background-color: white;
+   background-color: transparent;
    margin:auto;
    display:block;
 }
@@ -93,3 +93,13 @@ label span{
   bottom: 0px;
 }
 
+.login-provider-button{
+  color: #AD794B;
+  border-radius: 0.5rem;
+  border: 2px solid #AD794B;
+  background-color: transparent;
+  padding: 0.5rem;
+  font-size: medium;
+  font-weight: bold;
+  cursor:pointer;
+}

@@ -2,11 +2,12 @@ import React from 'react'
 import useFirestore from '../hooks/useFirestore';
 import {motion} from 'framer-motion'
 import { BsFillTrashFill } from "react-icons/bs";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../firebase_config';
 
+const ImgeGrid = ({setSelectedImage, setDocId, setDelUrl }) => {
 
-const ImgeGrid = ({setSelectedImage, setDocId }) => {
-
-   
+    const [user] = useAuthState(auth);
 
     const { docs } = useFirestore('images');
     
@@ -23,12 +24,13 @@ const ImgeGrid = ({setSelectedImage, setDocId }) => {
                     animate={{opacity:1}}
                     transition={{delay:0.5}}/>
                 
-                <button className="zindex " >
+                {user && <button className="zindex " >
                 <BsFillTrashFill onClick={(e) => 
                 { setDocId(doc.id);
+                    setDelUrl(doc.url);
                   e.stopPropagation( );
                 }} />
-                </button>
+                </button>}
 
                 </motion.div>
 

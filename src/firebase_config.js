@@ -1,6 +1,7 @@
 import firebase from "firebase";
 import 'firebase/storage';
-import 'firebase/firestore'
+import 'firebase/firestore';
+import "firebase/auth";
 var firebaseConfig = {
     apiKey: "AIzaSyDFn_vwdX1_csteYbCmU-iatWbj8FXI-no",
     authDomain: "asthetic-gallery.firebaseapp.com",
@@ -15,5 +16,6 @@ var firebaseConfig = {
   const galleryStorage =firebase.storage();
   const db = firebase.firestore();
   const timestamp = firebase.firestore.FieldValue.serverTimestamp;
+  const auth = firebase.auth();
 
-  export { galleryStorage, db , timestamp};
+  export { galleryStorage, db , timestamp, auth};

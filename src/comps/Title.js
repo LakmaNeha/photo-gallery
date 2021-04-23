@@ -4,6 +4,8 @@ import {useAuthState} from 'react-firebase-hooks/auth';
 import {auth} from '../firebase_config';
 import { Grid } from '@material-ui/core'
 
+
+
 const Title = () => {
 
     const [user]=useAuthState(auth)
@@ -11,6 +13,8 @@ const Title = () => {
     const signOut = async () => {
     await auth.signOut();
      };
+
+    
 
     return (
         <div>

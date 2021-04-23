@@ -19,11 +19,12 @@ function App() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [docId , setDocId] =useState(null);
   const [delUrl, setDelUrl] = useState(null);
-  const [theme, themeToggler, mountedComponent] = useDarkMode();
+  const [user] = useAuthState(auth)
 
+ 
+  const [theme, themeToggler, mountedComponent] = useDarkMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
 
-  const [user] = useAuthState(auth)
 
   if(!mountedComponent) return <div/>
   return (

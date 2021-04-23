@@ -10,7 +10,7 @@ const Button = styled.button`
   font-size:0.8rem;
   padding: 0.6rem;
   margin-top:1rem;
-  
+  font-size: x-large;
   
    
 `;
@@ -18,7 +18,7 @@ const Toggle = ({theme,  toggleTheme }) => {
     return (
      
         <Button  onClick={toggleTheme} >
-          Switch Theme
+         { theme === 'light' ?  "🌙" : "🌞" }
         </Button>
        
     );

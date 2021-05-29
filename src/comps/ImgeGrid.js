@@ -10,6 +10,14 @@ const ImgeGrid = ({setSelectedImage, setDocId, setDelUrl }) => {
     const [user] = useAuthState(auth);
 
     const { docs } = useFirestore('images');
+
+    function deletePicture(id,url){
+        if (window.confirm(`Are you sure you want to delete?`))
+        {
+         setDocId(id);
+         setDelUrl(url)
+        }
+    }
     
     return (
         <div className="img-grid">
@@ -25,11 +33,13 @@ const ImgeGrid = ({setSelectedImage, setDocId, setDelUrl }) => {
                     transition={{delay:0.5}}/>
                 
                 {user && <button className="zindex " >
-                <BsFillTrashFill onClick={(e) => 
+                <BsFillTrashFill /*onClick={(e) => 
                 { setDocId(doc.id);
                     setDelUrl(doc.url);
                   e.stopPropagation( );
-                }} />
+                }} */
+                onClick={(e)=>{e.stopPropagation();
+                    deletePicture(doc.id,doc.url)}} />
                 </button>}
 
                 </motion.div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { func, string } from 'prop-types';
+/*import { func, string } from 'prop-types';*/
 import styled from "styled-components"
 const Button = styled.button`
   background: ${({ theme }) => theme.background};
@@ -11,20 +11,20 @@ const Button = styled.button`
   padding: 0.6rem;
   margin-top:1rem;
   font-size: x-large;
-  
+  outline: none;
    
 `;
 const Toggle = ({theme,  toggleTheme }) => {
     return (
      
-        <Button  onClick={toggleTheme} >
+        <Button   onClick={toggleTheme} >
          { theme === 'light' ?  "🌙" : "🌞" }
         </Button>
        
     );
 };
-Toggle.propTypes = {
+/*Toggle.propTypes = {
     theme: string.isRequired,
     toggleTheme: func.isRequired,
-}
+}*/
 export default Toggle;

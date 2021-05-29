@@ -40,10 +40,7 @@ const Title = () => {
         </Grid>
 
 
-       <h1>
-       <h2 style={{letterSpacing: "3px", textAlign: "center" , color: " #596854 ", marginBottom: " 0rem ", marginTop: "1rem"}}>Gallery</h2>
-       {user && <p style={{letterSpacing: "3px", textAlign: "center" , fontSize: "smaller" , marginTop: "0rem"}} > Upload your pictures here </p>}
-       </h1>
+       
         
         
         </div>
